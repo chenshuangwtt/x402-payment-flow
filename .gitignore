@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.log
+*.bak
+*.backup
+*~
+.cache/
+coverage/
+.idea/
+.vscode/
+.DS_Store
+
+# Local purchase state, downloaded files and temporary writes.
+data/
+downloads/
+*.tmp

@@ -1,0 +1,44 @@
+{
+  "name": "x402-payment-flow",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local x402 V2 payment flow using Base Sepolia test USDC",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "wallets:init": "tsx src/init-wallets.ts",
+    "server": "tsx src/server.ts",
+    "server:watch": "tsx watch src/server.ts",
+    "probe": "tsx src/probe.ts",
+    "pay": "tsx src/pay.ts --pay",
+    "balance": "tsx src/balance.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "tsx --test tests/*.test.ts",
+    "lab:catalog": "tsx src/lab-client.ts catalog",
+    "lab:probe": "tsx src/lab-client.ts probe",
+    "lab:read:file": "tsx src/lab-client.ts read-file",
+    "lab:read:pass": "tsx src/lab-client.ts read-pass",
+    "lab:buy:file": "tsx src/lab-client.ts buy-file --pay",
+    "lab:buy:pass": "tsx src/lab-client.ts buy-pass --pay",
+    "lab:buy:analysis": "tsx src/lab-client.ts buy-analysis --pay"
+  },
+  "dependencies": {
+    "@x402/core": "2.32.0",
+    "@x402/evm": "2.32.0",
+    "@x402/express": "2.32.0",
+    "@x402/fetch": "2.32.0",
+    "dotenv": "16.6.1",
+    "express": "4.22.3",
+    "viem": "2.57.2",
+    "@x402/extensions": "2.32.0"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.25",
+    "@types/node": "22.15.30",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  }
+}
